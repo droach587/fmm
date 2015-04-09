@@ -1,0 +1,47 @@
+//  ==========================================================================
+//  Globals
+//  ==========================================================================
+	
+	@mixin center-container($width, $minWidth){
+		float: left;
+		position: relative;
+		display: block;
+		width: #{$width}px;
+		min-width: #{$minWidth}px !important;
+		margin-left: -$width*.5+px;
+		left: 50%;
+	}
+	
+//  ==========================================================================
+//  Fonts
+//  ==========================================================================
+	
+	//Foundation
+	//FontAwesome
+	@import "../vendor/foundation/foundation-icons";
+	@import '../vendor/fontawesome/font-awesome';
+	
+	
+	@include font-face("foundation-icons", font-files("foundation-icons.eot","foundation-icons.ttf", "foundation-icons.woff"));
+	
+	
+	//Default Font Families, Adjustments etc
+	$font-family-default: "Arial", "Helvetica", sans-serif !default;	
+	$default-font-size: 		14px !default;
+	$default-light-height:		18px !default;
+
+//  ==========================================================================
+//  Default Sizing 
+//  ==========================================================================
+	
+	$default-min-width:			980px !default;
+	$default-min-height:		768px !default;
+
+//  ==========================================================================
+//  Colors
+//  ==========================================================================
+
+
+//  ==========================================================================
+//  Sprites, Image Refs
+//  ==========================================================================		
