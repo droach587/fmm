@@ -1,7 +1,371 @@
 //  ==========================================================================
 //  Sass Modules for Style
 //  ==========================================================================
-	
+	p{
+		a{
+			color: $brand-red;
+		}
+	}
 //  ==========================================================================
 //  Themeatic Styles Below
 //  ==========================================================================
+
+	.vertical-center{
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 100%;
+		display: table;
+		text-align: center;
+		.center{
+			display: table-cell;
+			vertical-align: middle;
+		}
+	}
+	
+	.btn{
+		display: inline-block;
+		background: $brand-red;
+		color: white;
+		font: normal 20px $museo-500;
+		padding: 10px 30px;
+		margin: 15px 0;
+		@include transition-duration(.2s);
+		@include transition-property(all);
+		&:hover{
+			background: $brand-dark-grey;
+		}
+		&.grey{
+			background: #555;
+			&:hover{
+				background: $brand-red;
+			}
+		}
+	}
+	
+	.hero-push{
+		top: 100%;
+	}
+	
+	.center-960{
+		@include center-container(960,200);
+		overflow: hidden;
+		padding: 40px 0;
+		@include box-sizing(border-box);
+	}
+	
+	.circuit-bg{
+		background: image-url('mid-hero-bg.jpg') center center no-repeat;
+		@include background-size(cover);
+	}
+	
+	.white-col{
+		background: white;
+	}
+	
+	.slate-col{
+		background: #dcddd7;
+	}
+	
+	.grey-col{
+		background: #333333;
+	}
+	
+	.mid{
+		@extend .full-width;
+		text-align: center;
+		background: #222 image-url('mid-grey.jpg') center center no-repeat;
+		@include background-size(cover);
+		&.red{
+			background: $brand-red image-url('mid-red.jpg') center center no-repeat;	
+			@include background-size(cover);
+		}
+	}
+	
+	.mid__heading{
+		color: white;
+		font: normal 62px $museo-500-reg;
+		margin: 35px 0;
+		@extend .full-width;
+	}
+
+//  ==========================================================================
+//  Primary Header
+//  ==========================================================================
+
+	.primary-header{
+		width: 100%;
+		left: 0;
+		top: 0;
+		position: fixed;
+		z-index: 99;
+	}
+	.primary-header__interior{
+		background: $brand-dark-grey;
+		@extend .full-width;
+		z-index: 99;
+	}
+	
+	.brand-primary{
+		@extend .float-left;
+		h1{
+			color: $brand-red;
+			font: normal 42px $museo-700;
+			@extend .float-left;
+		}
+		p{
+			color: white;
+			font: normal 14.5px/18px $museo-100;
+			padding: 18px 0 0 10px;
+			@extend .float-left;
+		}
+	}
+	
+	.primary-nav{
+		@extend .float-right;
+		ul{
+			@extend .float-right;
+			margin: 40px 0 0 0;
+		}
+		li{
+			display: inline-block;
+			margin-left: 20px;
+			font: normal 14.5px $museo-500;
+			a{
+				color: white;
+				&:hover{
+					color: $brand-red;
+				}
+			}
+			&:first-child{
+				margin-left: 0px;
+			}
+		}
+	}
+	
+	.primary-hero{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		min-height: 500px;
+		background: #222 image-url('hero-backgroun.jpg') center center no-repeat;
+		@include background-size(cover);
+		h1, .hero-heading{
+			font: normal 83px $museo-500-reg;
+			color: white;
+			margin: 60px 0 10px 0;
+			word-wrap: break-word;
+		}
+		h3, .hero-subheading{
+			font: normal 25px/35px $museo-300;
+			color: white;
+			margin: 10px 0;
+			word-wrap: break-word;
+		}
+	}
+	
+	.primary-footer{
+		@extend .full-width;
+		text-align: center;
+		background: black;
+		p{
+			display: block;
+			color: #666;
+			font: normal 16px $museo-500-reg;
+			margin: 30px 0;
+		}
+	}
+	
+	.team-row{
+		margin-bottom: 20px;
+		overflow: hidden;
+		a{
+			color: $brand-red;
+			&:hover{
+				text-decoration: underline !important;
+			}
+		}
+		&.push-50{
+			margin-top: 54px;
+		}
+	}
+	.bg-panel{
+		@extend .full-width;
+		background: white;
+		padding: 20px;
+		padding-bottom: 1000px;
+		margin-bottom: -1000px;
+		@include box-sizing(border-box);
+	}
+	
+	.team-panel{
+		h3{
+			margin: 5px 0;
+		}
+		ul{
+			margin: 0;
+			padding: 0;
+			@extend .full-width
+		}
+		li{
+			margin: 5px 0;
+			@extend .full-width;
+		}
+	}
+	
+	.projects{
+		h3{
+			color: $brand-red;
+		}
+	}
+	
+	.project-grid,
+	.news-grid{
+		padding: 0 60px;
+		.pagination-control{
+			top: 90px;
+		}
+	}
+	.news-grid{
+		padding: 0 80px;
+		.pagination-control{
+			top: 120px;
+		}
+	}
+	
+	.project{
+		ul{
+			margin: 0;
+			padding: 0;
+		}
+		li{
+			list-style-position: inside;
+			list-style-type: disc;
+			a{
+				color: $brand-red;
+				&:hover{
+					text-decoration: underline !important;
+				}
+			}
+		}
+		h4{
+			padding: 0;
+			margin: 10px 0 0 0;
+		}
+	}
+	
+	.news-article{
+		img{
+			@include box-shadow(0px 2px 2px #666);
+		}
+		.article{
+			background: white;
+			@include box-shadow(0px 2px 2px #666);
+		}
+		h4{
+			margin: 5px 0;
+		}
+		h3{
+			color: $brand-red;
+		}
+	}
+	
+	.pagination-control{
+		font-size: 80px;
+		position: absolute;
+		top: 0px;
+		color: #555;
+		&:hover{
+			color: $brand-red;
+		}
+		&.left{
+			left: 20px;
+		}
+		&.right{
+			right: 20px;
+		}
+	}
+	
+	.publication-index-container{
+		margin-top: 10px;
+	}
+	.publication-index{
+		li{
+			padding: 10px 6px;
+		}
+		li > a{
+			background: white;
+			width: 100%;
+			text-align: center;
+			padding: 10px 0;
+			color: #555;
+			@extend .full-width;
+			&:hover,
+			&.active{
+				background: #555;
+				color: white;
+			}
+		}
+		li > span{
+			width: 100%;
+			padding: 10px 0;
+			text-align: center;
+			@extend .full-width;
+		}
+	}
+	
+	.publication-list{
+		margin-top: 40px;
+		h3{
+			margin-top: 0px;
+			color: $brand-red;
+			a{
+				color: $brand-red;
+				&:hover{
+					text-decoration: underline !important;
+				}
+			}
+		}
+	}
+	
+	.awards-list{
+		margin-top: 40px;
+		h3{
+			color: #555;
+		}
+	}
+	
+	.contact-us{
+		h3{
+			color: #e5e5e5;
+			margin: 5px 0 5px 0;
+		}
+		p{
+			color: #9d9d9d;
+			margin: 5px 0;
+			&.email{
+				margin-top: 20px;
+			}
+		}
+		.profiles{
+			padding-top: 20px;
+		}
+		.profile{
+			margin-bottom: 30px;
+		}
+		.profile-image{
+			@include box-sizing(border-box);
+			@include border-radius(100%);
+			border: 4px solid #666;
+		}
+		.map{
+			border: 4px solid #666;
+			@include box-sizing(border-box);
+			iframe{
+				margin-bottom: -5px;
+			}
+		}
+	}

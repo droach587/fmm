@@ -1,0 +1,16 @@
+@media screen and (max-width: 960px) {
+	.center-960{
+		width: 100%;
+		left: 0;
+		margin-left: 0;
+		padding: 0 10px;
+		@include box-sizing(border-box);
+	}
+	.primary-header__interior{
+		padding: 0 10px;
+		@include box-sizing(border-box);
+	}
+	.mid__heading{
+		font-size: 40px;
+	}
+}

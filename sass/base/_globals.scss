@@ -24,11 +24,25 @@
 	
 	@include font-face("foundation-icons", font-files("foundation-icons.eot","foundation-icons.ttf", "foundation-icons.woff"));
 	
+	@include font-face("museo-100", font-files("MuseoSans-100-webfont.eot","MuseoSans-100-webfont.ttf", "MuseoSans-100-webfont.woff"));
+	@include font-face("museo-700", font-files("Museo700-Regular-webfont.eot", "Museo700-Regular-webfont.ttf", "Museo700-Regular-webfont.woff"));
+	@include font-face("museo-300", font-files("MuseoSans-300-webfont.eot", "MuseoSans-300-webfont.ttf", "MuseoSans-300-webfont.woff"));
+	@include font-face("museo-500", font-files("museosans_500-webfont-webfont.eot", "museosans_500-webfont-webfont.ttf", "museosans_500-webfont-webfont.woff"));
+	@include font-face("museo-500-reg", font-files("museo500-regular-webfont.eot", "museo500-regular-webfont.ttf", "museo500-regular-webfont.woff"));
 	
 	//Default Font Families, Adjustments etc
 	$font-family-default: "Arial", "Helvetica", sans-serif !default;	
 	$default-font-size: 		14px !default;
 	$default-light-height:		18px !default;
+	
+//  ==========================================================================
+//  Custom Fonts
+//  ==========================================================================
+	$museo-100: "museo-100", "Arial", "Helvetica", sans-serif !default;	
+	$museo-500: "museo-500", "Arial", "Helvetica", sans-serif !default;	
+	$museo-500-reg: "museo-500-reg", "Arial", "Helvetica", sans-serif !default;	
+	$museo-700: "museo-700", "Arial", "Helvetica", sans-serif !default;	
+	$museo-300: "museo-300", "Arial", "Helvetica", sans-serif !default;	
 
 //  ==========================================================================
 //  Default Sizing 
@@ -41,6 +55,8 @@
 //  Colors
 //  ==========================================================================
 
+	$brand-dark-grey:			#242424;
+	$brand-red:					#dc291e;
 
 //  ==========================================================================
 //  Sprites, Image Refs
