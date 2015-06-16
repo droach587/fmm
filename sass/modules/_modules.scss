@@ -6,9 +6,30 @@
 			color: $brand-red;
 		}
 	}
+	
+	.dark-red{
+		color: $brand-dark-red;
+	}
+	
+//  ==========================================================================
+//  Font Modules
+//  ==========================================================================
+	
+	.museo-100 		{ font-family: $museo-100;}
+	.museo-500 		{ font-family: $museo-500}
+	.museo-500-reg 	{ font-family: $museo-500-reg} 
+	.museo-700 		{ font-family: $museo-700}
+	.museo-300 		{ font-family: $museo-300}
+
+
 //  ==========================================================================
 //  Themeatic Styles Below
 //  ==========================================================================
+
+	.mobile-nav-toggle{
+		display: none;
+		visibility: hidden;
+	}
 
 	.vertical-center{
 		position: absolute;
@@ -218,7 +239,7 @@
 	
 	.projects{
 		h3{
-			color: $brand-red;
+			color: $brand-dark-red;
 		}
 	}
 	
@@ -227,6 +248,9 @@
 		padding: 0 60px;
 		.pagination-control{
 			top: 90px;
+		}
+		h4,h3,p{
+			@extend .museo-500-reg;
 		}
 	}
 	.news-grid{
@@ -269,7 +293,7 @@
 			margin: 5px 0;
 		}
 		h3{
-			color: $brand-red;
+			color: $brand-dark-red;
 		}
 	}
 	
@@ -322,12 +346,16 @@
 		h3{
 			margin-top: 0px;
 			color: $brand-red;
+			@extend .museo-500-reg;
 			a{
-				color: $brand-red;
+				color: $brand-dark-red;
 				&:hover{
 					text-decoration: underline !important;
 				}
 			}
+		}
+		p{
+			@extend .museo-500;
 		}
 	}
 	
@@ -335,6 +363,7 @@
 		margin-top: 40px;
 		h3{
 			color: #555;
+			@extend .museo-500-reg;
 		}
 	}
 	
@@ -346,6 +375,7 @@
 		p{
 			color: #9d9d9d;
 			margin: 5px 0;
+			word-break: break-word;
 			&.email{
 				margin-top: 20px;
 			}

@@ -22,11 +22,51 @@ var mainJs = (function () {
 		        }
 		    }
 		}());
+		
+		var jumpNav = function(){
+			$('.primary-nav a').on('click', function(e){
+				
+				var id = $(this).attr('href');
+				
+				$('html, body').stop().animate({
+					scrollTop : $(id).offset().top - 100
+				}, 200, function(){
+					closeNav();
+				});
+				
+				e.preventDefault();
+			});
+		}
+		
+		var openNav = function(){
+			$('.primary-nav').addClass('isActive');
+ 			$('.mobile-nav-toggle').find('.fa-list').removeClass('fa-list').addClass('fa-close');
+		}
+		
+		var closeNav = function(){
+			$('.primary-nav').removeClass('isActive');
+	 		$('.mobile-nav-toggle').find('.fa-close').removeClass('fa-close').addClass('fa-list');
+		}
  		
+ 		var mobileNavToggle = function(){
+	 		$('.mobile-nav-toggle').on('click', function(e){
+		 		
+		 		var isActive = $('.primary-nav').hasClass('isActive');
+		 		
+		 		if(!isActive){
+		 			openNav();
+		 		}else{
+			 		closeNav();
+		 		}
+		 		
+		 		e.preventDefault();
+	 		});
+ 		}
  		
         function init() {
             //Init Here
-            console.log('init pass');
+            mobileNavToggle();
+            jumpNav();
         }
  
  

@@ -13,4 +13,94 @@
 	.mid__heading{
 		font-size: 40px;
 	}
+	
+	.primary-nav{
+		width: 100%;
+		display: none;
+		visibility: hidden;
+		ul{
+			margin: 0;
+			width: 100%;
+			padding: 0px;
+			li{
+				width: 100%;
+				clear: left;
+				margin: 0;
+				padding: 10px 0;
+				text-align: center;
+				border-top: 1px solid $brand-dark-red;
+				&:first-child{
+					border-top: 0px;
+				}
+			}
+			a{
+				width: 100%;
+				display: inline-block;
+			}
+		}
+		&.isActive{
+			display: block;
+			visibility: visible;
+		}
+	}
+	
+	.brand-primary{
+		margin-left: -24px;
+		@include transform(scale(.8));
+	}
+	
+	.mobile-nav-toggle{
+		display: block;
+		visibility: visible;
+		position: absolute;
+		top: 25px;
+		right: 22px;
+		font-size: 30px;
+		color: $brand-dark-red;
+	}
+}
+
+@media screen and (max-width:960px){
+	.primary-hero h1, .primary-hero .hero-heading{
+		font-size: 47px;
+		line-height: 56px;
+	}
+	.primary-hero h3, .primary-hero .hero-subheading{
+		font-size: 18px;
+		line-height: 24px;
+		padding: 10px;
+		@include box-sizing(border-box);
+		br{
+			display: none;
+		}
+	}
+}
+
+@media screen and (max-width:960px){
+	h2{
+		font-size: 18px;
+	}
+	h3{
+		font-size: 16px;
+	}
+	.btn{
+		font-size: 16px;
+	}
+}
+
+@media screen and (max-width:960px){
+	.news-grid,
+	.project-grid{
+		padding: 0 26px;
+	}
+	
+	.pagination-control{
+		font-size: 38px;
+	}
+	.pagination-control.left{
+		left: 10px;
+	}
+	.pagination-control.right{
+		right: 10px;
+	}
 }
