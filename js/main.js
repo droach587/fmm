@@ -63,10 +63,53 @@ var mainJs = (function () {
 	 		});
  		}
  		
+ 		var slick = function() {
+			$('.js-projects').slick({
+				infinite: true,
+				slidesToShow: 3,
+				slidesToScroll: 1,
+				arrows: true,
+				nextArrow: $('.js-projects-next'),
+				prevArrow: $('.js-projects-previous'),
+				responsive: [{
+					breakpoint: 768,
+					settings: {
+						slidesToShow: 2
+					}
+				}, {
+					breakpoint: 640,
+					settings: {
+						slidesToShow: 1
+					}
+				}]
+			});
+			
+			$('.js-news').slick({
+				infinite: true,
+				slidesToShow: 3,
+				slidesToScroll: 1,
+				arrows: true,
+				nextArrow: $('.js-news-next'),
+				prevArrow: $('.js-news-previous'),
+				responsive: [{
+					breakpoint: 768,
+					settings: {
+						slidesToShow: 2
+					}
+				}, {
+					breakpoint: 640,
+					settings: {
+						slidesToShow: 1
+					}
+				}]
+			});
+		}
+ 		
         function init() {
             //Init Here
             mobileNavToggle();
             jumpNav();
+            slick();
         }
  
  

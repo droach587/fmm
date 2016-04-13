@@ -258,21 +258,16 @@
 		.pagination-control{
 			top: 120px;
 		}
+		.slick-track{
+			padding-bottom: 10px;
+		}
 	}
 	
 	.project{
-		ul{
-			margin: 0;
-			padding: 0;
-		}
-		li{
-			list-style-position: inside;
-			list-style-type: disc;
-			a{
-				color: $brand-red;
-				&:hover{
-					text-decoration: underline !important;
-				}
+		a{
+			color: $brand-red;
+			&:hover{
+				text-decoration: underline !important;
 			}
 		}
 		h4{
@@ -282,6 +277,9 @@
 	}
 	
 	.news-article{
+		a{
+			color: $brand-red;
+		}
 		img{
 			@include box-shadow(0px 2px 2px #666);
 		}
@@ -302,6 +300,9 @@
 		position: absolute;
 		top: 0px;
 		color: #555;
+		background: transparent;
+		border: none;
+		-webkit-appearance: none;
 		&:hover{
 			color: $brand-red;
 		}
